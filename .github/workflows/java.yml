@@ -1,4 +1,4 @@
-name: manual trigger repository event
+name: JAVA SETUP 
 
 on: 
  workflow_dispatch

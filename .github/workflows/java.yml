@@ -12,7 +12,7 @@ jobs:
         java-version: '17'
         distribution: microsoft
     - name: Print Java Version
-      run: echo java --version
+      run:  java -version
         
         
     

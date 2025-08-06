@@ -10,7 +10,7 @@ jobs:
       uses: actions/setup-java@v3.14.1
       with:
         java-version: '17'
-        Java distribution: microsoft
+        distribution: microsoft
     - name: Print Java Version
       run: echon java --version
         

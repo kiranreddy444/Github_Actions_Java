@@ -1,4 +1,4 @@
-name: Github Context Variable
+name: Github Context Global Variable
 
 on:
   workflow_dispatch

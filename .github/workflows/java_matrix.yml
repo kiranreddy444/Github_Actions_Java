@@ -1,4 +1,4 @@
-name: Matrix with java and ubuntu
+name: Matrix
 
 on:
   workflow_dispatch: 

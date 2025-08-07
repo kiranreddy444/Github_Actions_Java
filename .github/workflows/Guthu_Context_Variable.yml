@@ -12,10 +12,10 @@ jobs:
     env:
       MY_VAR: jobs  # Job-level environment variable
     steps:
-      - name: Print env value before
+      - name: Print env value inside steps
         run: echo "Step-level MY_VAR value is ${{ env.MY_VAR }}"
         env:
           MY_VAR: steps  # Step-level override
 
-      - name: Print env value after
+      - name: Print env value after after steps
         run: echo "Job-level MY_VAR value is ${{ env.MY_VAR }}"

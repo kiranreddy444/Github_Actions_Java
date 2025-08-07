@@ -1,6 +1,5 @@
 name: GitHub Context
 
-
 on:
  workflow_dispatch:
  pull_request:
@@ -8,12 +7,12 @@ jobs:
  github_context:
   runs-on: ubuntu-latest
   steps:
-   - name: Print Info about Github
+   - name: Pring information about the gitgub
      run: |
-      echo 'Repository details ${{github.repository}}'
-      echo 'Repo id ${{github.repository_id}}'
-      echo 'Repo url ${{github.repositoryUrl}}'
-      echo 'Repo token ${{github.token}}'
+      echo 'Repository related details ${{github.repository}}'
+      echo 'Repository id ${{github.repository_id}}'
+      echo 'Repository url ${{github.repositoryUrl}}'
+      echo 'Repository token ${{github.token}}'
       echo 'Workflow name ${{github.workflow}}'
       echo 'Actor ${{github.actor}}'
       echo  'ref details ${{github.ref}}'

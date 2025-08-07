@@ -1,0 +1,28 @@
+name: needs exit
+
+
+on:  
+  push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Print build
+        run: exit 1 
+        
+  test:
+    needs: build
+    runs-on: windows-latest
+    steps: 
+     - name: Print test - chrome 
+       run: echo 'test chrome'
+     - name: Print test - edge
+       run: echo 'test edge'
+
+  deploy:
+    needs: [build , test ]
+    runs-on: ubuntu-latest
+    steps:
+     - name: Print deploy
+       run: echo 'deploy'

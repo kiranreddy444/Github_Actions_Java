@@ -31,5 +31,5 @@ jobs:
      - name: Setup java JDK
        uses: actions/setup-java@v3
        with:
-         java-version: ${{ matrix.java-version}}
+         java-version: ${{matrix.java-version}}
          distribution: microsoft

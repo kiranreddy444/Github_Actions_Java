@@ -24,4 +24,6 @@ jobs:
       run: echo 'reference head is main'
    -  if: github.event_name == 'workflow_dispatch'
       run: echo 'trigger the manual trigger'
+   -  if: github.repository_id == '1033176199'
+      run: echo 'Repository id is matched continue to execute the steps'   
       

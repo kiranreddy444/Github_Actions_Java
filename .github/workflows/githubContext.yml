@@ -1,4 +1,4 @@
-name: GitHub Context
+name: GitHub Context with if condition
 
 on:
  workflow_dispatch:

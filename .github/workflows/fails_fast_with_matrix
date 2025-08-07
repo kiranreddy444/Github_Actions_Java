@@ -1,0 +1,20 @@
+name: Fail_fast_Matrix
+on:
+  workflow_dispatch: 
+
+jobs:
+ matrix-jobs:
+  runs-on: ${{matrix.os}}
+  strategy:
+    fail-fast: false
+      matrix:
+        os:
+         - ubuntu-latest
+         - windows-latest
+        java-version: [17,20,21]
+  steps:
+     - name: Setup java JDK
+       uses: actions/setup-java@v3
+       with:
+         java-version: ${{ matrix.java-version}}
+         distribution: microsoft

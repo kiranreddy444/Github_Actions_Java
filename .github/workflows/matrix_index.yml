@@ -1,4 +1,4 @@
-name: Matrix
+name: Matrix_index
 
 on: workflow_dispatch
 

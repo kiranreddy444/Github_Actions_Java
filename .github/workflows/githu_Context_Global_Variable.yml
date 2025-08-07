@@ -1,0 +1,23 @@
+name: Github Context Variable
+
+on:
+  workflow_dispatch
+
+env:
+  MY_VAR: workflow  # Workflow-level environment variable
+
+jobs:
+  variables:
+    runs-on: ubuntu-latest
+    env:
+      MY_VAR: jobs  # Job-level environment variable
+    steps:
+      - name: Print env value inside steps anf global variable
+        run: |
+         echo "Step-level MY_VAR value is ${{ env.MY_VAR }}"
+         echo "Step-level MY_VAR value is ${{ vars.MY_VAR }}"  # accesing global veriable
+        env:
+          MY_VAR: steps  # Step-level override
+
+      - name: Print env value after after steps
+        run: echo "Job-level MY_VAR value is ${{ env.MY_VAR }}"
